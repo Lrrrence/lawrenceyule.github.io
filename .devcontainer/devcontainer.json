@@ -13,7 +13,7 @@
   },
 
   // Optionally: run jekyll serve automatically on container entering using the Docker entrypoint
-  "postAttachCommand": "./bin/entry_point.sh",
+  "postAttachCommand": "/bin/sh -c 'sudo chown -R $(whoami) /workspaces/lawrenceyule.github.io/.jekyll-cache && ./bin/entry_point.sh'",
 
   "customizations": {
     "vscode": {
